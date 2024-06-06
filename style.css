@@ -1,0 +1,101 @@
+body {
+  background-image: url("https://source.unsplash.com/random/1920x1080");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#app {
+  /* ... (Your existing app styles) ... */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Add a semi-transparent background */
+  backdrop-filter: blur(5px); /* Add a blur effect */
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+#card {
+  /* ... (Your existing card styles) ... */
+  background-image: linear-gradient(
+    to bottom right,
+    #f0f0f0,
+    #e0e0e0
+  ); /* Add a gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+#card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer; /* Add a cursor on hover */
+}
+
+#weather-icon {
+  /* ... (Your existing icon styles) ... */
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3)); /* Add a drop shadow */
+}
+
+.toggle-button {
+  /* ... (Your existing toggle button styles) ... */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+#app p:last-of-type {
+  animation: fadeInOut 4s infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.toggle-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+.toggle-button.dark {
+  background-color: #333;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1);
+}
+
+/* Optional: Style the toggle button icon (e.g., using Font Awesome) */
+.toggle-button::before {
+  content: "\f0eb"; /* Sun icon from Font Awesome */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #333;
+}
+
+.toggle-button.dark::before {
+  color: #fff;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App | 5. 10 - homework</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gray-100 dark:bg-gray-900 font-sans text-gray-800 dark:text-gray-200 transition duration-500 ease-in-out"
+  >
+    <div
+      id="app"
+      class="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900"
+    >
+      <h1 class="text-4xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+        Weather App
+      </h1>
+
+      <form id="change-location" class="flex items-center mb-8">
+        <input
+          type="text"
+          name="city"
+          placeholder="Enter a location"
+          autocomplete="off"
+          class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-blue-500 dark:focus:border-blue-400"
+        />
+        <button
+          type="submit"
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ml-2"
+        >
+          Search
+        </button>
+      </form>
+
+      <div
+        id="card"
+        class="bg-white dark:bg-gray-800 shadow-md rounded-lg p-8 hidden transform transition duration-500 ease-in-out hover:scale-105 hover:shadow-lg"
+      >
+        <div class="flex justify-center items-center mb-6">
+          <img id="weather-icon" class="w-24 h-24" src="" alt="Weather Icon" />
+        </div>
+
+        <div class="text-center">
+          <h2 id="city-name" class="text-2xl font-bold mb-2">City Name</h2>
+          <p
+            id="weather-description"
+            class="text-gray-600 dark:text-gray-400 mb-4"
+          >
+            Cloudy
+          </p>
+          <div class="text-5xl font-bold mb-2">
+            <span id="temperature">25</span>
+            <span class="text-lg">&deg;C</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="overlay"
+        class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-gray-900 bg-opacity-50 z-10 hidden"
+      >
+        <div class="spinner-border text-blue-500" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+
+      <a href="https://github.com/abdulvokhidjon?tab=repositories">
+        <p class="text-2xl text-blue-600 dark:text-gray-400 mt-10">
+          Powered by
+          <span class="text-3xl italic text-gray-500">Abdulvohid</span>
+        </p>
+      </a>
+    </div>
+    <div id="overlay" class="hidden"><i class="fas fa-spinner"></i></div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
